@@ -7,20 +7,25 @@ var specialCharacter = "~!@#$%^&*()_+{}|:<>?,.';'[]\=-`";
 var numberValue = "123456789";
 
 
-
-var generatePassword = function(){
+var generatePassword = function () {
   passGroup = "";
   upperPassword = "";
   passwordLenght = promptPasswordLenght();
 }
 
-
+// placeholder button selector
 var get = document.querySelector("#generate");
 
-get.addEventListener("click", function () {
+createPassword();
+
+get.addEventListener("btn", function () {
   ps = generatePassword();
   document.getElementById("password").placeholder = ps;
 });
+
+//execute
+
+
 
 var generatePassword = window.prompt("PromptPasswordLenght");
 var playerHealth = 100;
