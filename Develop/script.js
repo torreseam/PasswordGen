@@ -1,9 +1,8 @@
 //Character Array
-var symbArr = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "`", "~", "{", "[", "]", "}"];
-var numbArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var lowerArr = ["a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m", "q", "w", "e", "r",
-  "t", "y", "u", "i", "o", "p"];
-var upperArr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var symbArr = ["!","@","#","$","%","^","&","*","(",")","-","_","+","=","`","~","{","[","]","}"];
+var numbArr = ["0","1","2","3","4","5","6","7","8","9"];
+var lowerArr = ["a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m","q","w","e","r","t","y","u","i","o","p"];
+var upperArr = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
 function generatePassword() {
   var passwordLength = Number(prompt("How many characters would you like in your passowrd (Choose between 8 to 128)"));
@@ -79,5 +78,6 @@ function generate() {
     generatePasswordValue.push(passwordResult);
     console.log(passwordResult = generatePasswordValue);
   }
-  return generatePasswordValue;
 }
+
+return generatePasswordValue;
