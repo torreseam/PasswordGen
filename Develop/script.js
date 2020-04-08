@@ -78,6 +78,5 @@ function generate() {
     generatePasswordValue.push(passwordResult);
     console.log(passwordResult = generatePasswordValue);
   }
+  return generatePasswordValue.join("");
 }
-
-return generatePasswordValue;
