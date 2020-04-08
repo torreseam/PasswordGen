@@ -78,5 +78,11 @@ function generate() {
     generatePasswordValue.push(passwordResult);
     console.log(passwordResult = generatePasswordValue);
   }
-  return generatePasswordValue.join("");
+  var ps = generatePasswordValue.join("");
+  UserInput(ps);
+  return ps;
+
+};
+function UserInput(ps) {
+  document.getElementById("#password").textContent =ps;
 }
