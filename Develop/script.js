@@ -1,8 +1,8 @@
 //Character Array
-var symbArr = ["!","@","#","$","%","^","&","*","(",")","-","_","+","=","`","~","{","[","]","}"];
-var numbArr = ["0","1","2","3","4","5","6","7","8","9"];
-var lowerArr = ["a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m","q","w","e","r","t","y","u","i","o","p"];
-var upperArr = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+var symbArr = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "`", "~", "{", "[", "]", "}"];
+var numbArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var lowerArr = ["a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p"];
+var upperArr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 function generatePassword() {
   var passwordLength = Number(prompt("How many characters would you like in your passowrd (Choose between 8 to 128)"));
@@ -45,7 +45,7 @@ function generate() {
     for (var i = 0; i < passcodeOptions.length; i++) {
       var lowercaseChar = lowerArr[Math.floor(Math.random() * passcodeOptions.length)];
       passwordChar.push(lowercaseChar);
-      // console.log("lowercaseChar");
+      console.log("lowercaseChar");
     }
   }
 
@@ -53,7 +53,7 @@ function generate() {
     for (var i = 0; i < passcodeOptions.length; i++) {
       var uppercaseChar = upperArr[Math.floor(Math.random() * passcodeOptions.length)];
       passwordChar.push(uppercaseChar);
-      // console.log(uppercaseChar);
+      console.log(uppercaseChar);
     }
   }
 
@@ -68,7 +68,7 @@ function generate() {
   if (passwordOptions.hasSpecialCharacters) {
     for (var i = 0; i < passcodeOptions.length; i++) {
       var symbolChar = symArr[Math.floor(Math.random() * passcodeOptions.length)];
-      passwordChar.push(symbolChar);
+      passwordChar.push(symbolChar[i]);
       // console.log(symbolChar);
     }
   }
@@ -81,8 +81,8 @@ function generate() {
   var ps = generatePasswordValue.join("");
   UserInput(ps);
   return ps;
-
 };
-function UserInput(ps) {
-  document.getElementById("#password").textContent =ps;
-}
+//Add Event Listener
+let psButton = document.getElementById('generate');
+psButton.addEventListener('click', generatePassword())
+
