@@ -1,8 +1,15 @@
+var genButton = document.querySelector("#generate");
+console.log("generate button");
+var passwordText = document.querySelector("#password");
+
 //Character Array
 var symbArr = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "`", "~", "{", "[", "]", "}"];
 var numbArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var lowerArr = ["a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p"];
 var upperArr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+var inputCharSet = "";
+var choices = "";
 
 function generatePassword() {
   var passwordLength = Number(prompt("How many characters would you like in your passowrd (Choose between 8 to 128)"));
@@ -22,7 +29,7 @@ function generatePassword() {
     uppercase = confirm("Do you want all UpperCase?");
     numbers = confirm("Do you want numbers?");
     symbols = confirm("Do you want symbols?");
-    console.log(lowercase, uppercase, numbers, symbols);
+    // console.log(lowercase, uppercase, numbers, symbols);
   }
   var passcodeOptions = {
     length: passwordLength,
@@ -68,20 +75,20 @@ function generate() {
   if (passwordOptions.hasSpecialCharacters) {
     for (var i = 0; i < passcodeOptions.length; i++) {
       var symbolChar = symArr[Math.floor(Math.random() * passcodeOptions.length)];
-      passwordChar.push(symbolChar[i]);
+      passwordChar.push(symbolChar);
       // console.log(symbolChar);
     }
   }
-  var generatePasswordValue = [];
-  for (var i = 0; i < passcodeOptions.lenght; i++) {
-    var passwordResult = passwordChar[Math.floor(Math.random() * passcodeChar.length)];
-    generatePasswordValue.push(passwordResult);
-    console.log(passwordResult = generatePasswordValue);
+  var choices = [];
+
+  for (i = 0; i < input; i++) {
+    choices.push(inputCharSet[Math.floor((Math.random() * inputCharSet.length) + 0)]);
+    var results = choices.join("");
   }
-  var ps = generatePasswordValue.join("");
-  UserInput(ps);
-  return ps;
+  return (results);
 };
+
+
 //Add Event Listener
 let psButton = document.getElementById('generate');
 psButton.addEventListener('click', generatePassword())
