@@ -1,6 +1,8 @@
-var genButton = document.querySelector("#generate");
-console.log("generate button");
+// var genButton = document.querySelector("#generate");
+// console.log("generate button");
 var passwordText = document.querySelector("#password");
+var psButton = document.querySelector("#generate");
+psButton.addEventListener('click', generatePassword)
 
 //Character Array
 var symbArr = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "`", "~", "{", "[", "]", "}"];
@@ -79,7 +81,6 @@ function generate() {
       // console.log(symbolChar);
     }
   }
-  var choices = [];
 
   for (i = 0; i < input; i++) {
     choices.push(inputCharSet[Math.floor((Math.random() * inputCharSet.length) + 0)]);
@@ -90,6 +91,6 @@ function generate() {
 
 
 //Add Event Listener
-let psButton = document.getElementById('generate');
-psButton.addEventListener('click', generatePassword())
-
+// // let psButton = document.getElementById('generate');
+// // var psButton = document.querySelector("#generate");
+// psButton.addEventListener('click', generatePassword())
